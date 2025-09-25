@@ -10,3 +10,4 @@
 /// other layers to programmatically reference the application layer's assembly.
 /// </remarks>
 public class ApplicationLayer { }
+//             Errors = result.Errors.Select(e => e.ErrorMessage).ToList()
