@@ -1,77 +1,87 @@
-# Developer Evaluation Project
+# MOUTSTI
 
-`READ CAREFULLY`
+## Caso de Uso
 
-## Use Case
-**You are a developer on the DeveloperStore team. Now we need to implement the API prototypes.**
+**Você é um desenvolvedor na equipe DeveloperStore. Agora precisamos implementar os protótipos da API.**
 
-As we work with `DDD`, to reference entities from other domains, we use the `External Identities` pattern with denormalization of entity descriptions.
+Como trabalhamos com `DDD`, para referenciar entidades de outros domínios utilizamos o padrão `Identidades Externas` com desnormalização das descrições das entidades.
 
-Therefore, you will write an API (complete CRUD) that handles sales records. The API needs to be able to inform:
+Portanto, você deverá escrever uma API (CRUD completo) que manipule registros de vendas. A API precisa ser capaz de informar:
 
-* Sale number
-* Date when the sale was made
-* Customer
-* Total sale amount
-* Branch where the sale was made
-* Products
-* Quantities
-* Unit prices
-* Discounts
-* Total amount for each item
-* Cancelled/Not Cancelled
+* Número da venda
+* Data em que a venda foi realizada
+* Cliente
+* Valor total da venda
+* Filial onde a venda foi realizada
+* Produtos
+* Quantidades
+* Preços unitários
+* Descontos
+* Valor total de cada item
+* Cancelada / Não cancelada
 
-It's not mandatory, but it would be a differential to build code for publishing events of:
-* SaleCreated
-* SaleModified
-* SaleCancelled
-* ItemCancelled
+Não é obrigatório, mas será um diferencial construir código para publicar eventos de:
 
-If you write the code, **it's not required** to actually publish to any Message Broker. You can log a message in the application log or however you find most convenient.
+* SaleCreated (VendaCriada)
+* SaleModified (VendaAlterada)
+* SaleCancelled (VendaCancelada)
+* ItemCancelled (ItemCancelado)
 
-### Business Rules
+Se você escrever o código, **não é necessário** realmente publicar em nenhum Message Broker. Você pode apenas registrar uma mensagem no log da aplicação ou da forma que considerar mais conveniente.
 
-* Purchases above 4 identical items have a 10% discount
-* Purchases between 10 and 20 identical items have a 20% discount
-* It's not possible to sell above 20 identical items
-* Purchases below 4 items cannot have a discount
+### Regras de Negócio
 
-These business rules define quantity-based discounting tiers and limitations:
+* Compras acima de 4 itens idênticos têm 10% de desconto
+* Compras entre 10 e 20 itens idênticos têm 20% de desconto
+* Não é possível vender mais de 20 itens idênticos
+* Compras abaixo de 4 itens não podem ter desconto
 
-1. Discount Tiers:
-   - 4+ items: 10% discount
-   - 10-20 items: 20% discount
+Essas regras de negócio definem faixas de desconto baseadas na quantidade e suas limitações:
 
-2. Restrictions:
-   - Maximum limit: 20 items per product
-   - No discounts allowed for quantities below 4 items
+1. Faixas de Desconto:
 
-## Overview
-This section provides a high-level overview of the project and the various skills and competencies it aims to assess for developer candidates. 
+   * 4+ itens: 10% de desconto
+   * 10 a 20 itens: 20% de desconto
 
-See [Overview](/.doc/overview.md)
+2. Restrições:
 
-## Tech Stack
-This section lists the key technologies used in the project, including the backend, testing, frontend, and database components. 
+   * Limite máximo: 20 itens por produto
+   * Nenhum desconto permitido para quantidades abaixo de 4 itens
 
-See [Tech Stack](/.doc/tech-stack.md)
+## Visão Geral
+
+Esta seção fornece uma visão de alto nível do projeto e das diversas habilidades e competências que ele busca avaliar em candidatos a desenvolvedor.
+
+Veja [Visão Geral](/.doc/overview.md)
+
+## Stack Tecnológica
+
+Esta seção lista as principais tecnologias usadas no projeto, incluindo backend, testes, frontend e banco de dados.
+
+Veja [Stack Tecnológica](/.doc/tech-stack.md)
 
 ## Frameworks
-This section outlines the frameworks and libraries that are leveraged in the project to enhance development productivity and maintainability. 
 
-See [Frameworks](/.doc/frameworks.md)
+Esta seção descreve os frameworks e bibliotecas utilizados no projeto para aumentar a produtividade e a manutenibilidade do desenvolvimento.
+
+Veja [Frameworks](/.doc/frameworks.md)
 
 <!-- 
-## API Structure
-This section includes links to the detailed documentation for the different API resources:
-- [API General](./docs/general-api.md)
+## Estrutura da API
+Esta seção inclui links para a documentação detalhada dos diferentes recursos da API:
+- [API Geral](./docs/general-api.md)
 - [Products API](/.doc/products-api.md)
 - [Carts API](/.doc/carts-api.md)
 - [Users API](/.doc/users-api.md)
 - [Auth API](/.doc/auth-api.md)
 -->
 
-## Project Structure
-This section describes the overall structure and organization of the project files and directories. 
+## Estrutura do Projeto
 
-See [Project Structure](/.doc/project-structure.md)
+Esta seção descreve a estrutura geral e a organização dos arquivos e diretórios do projeto.
+
+Veja [Estrutura do Projeto](/.doc/project-structure.md)
+
+---
+
+👉 Quer que eu monte um **resumo em português** pronto para apresentar em entrevista, em vez da tradução literal do desafio?
