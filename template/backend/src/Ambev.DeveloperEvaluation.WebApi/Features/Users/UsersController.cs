@@ -74,6 +74,7 @@ public class UsersController : BaseController
     {
         var request = new GetUserRequest { Id = id };
         var validator = new GetUserRequestValidator();
+
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)

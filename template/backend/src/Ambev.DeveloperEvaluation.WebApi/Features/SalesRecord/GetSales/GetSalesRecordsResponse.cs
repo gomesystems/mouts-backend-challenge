@@ -1,6 +1,6 @@
-﻿namespace Ambev.DeveloperEvaluation.WebApi.Features.SalesRecord.CreateSales;
+﻿namespace Ambev.DeveloperEvaluation.WebApi.Features.SalesRecord.GetSales;
 
-    public class SalesRecordsResponse
+    public class GetSalesRecordsResponse
     {
         public Guid Id { get; set; }
         public Guid ProductId { get; set; }

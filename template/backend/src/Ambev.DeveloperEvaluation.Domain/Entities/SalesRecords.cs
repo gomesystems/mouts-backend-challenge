@@ -45,6 +45,7 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities
         //Products
         public List<SaleItem> Items { get; set; } = new List<SaleItem>();
 
+
         //Quantities 
         public int Quantity { get; set; }
 
